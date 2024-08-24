@@ -2,7 +2,9 @@ import React from 'react'
 
 const TermDeposit = () => {
   return (
-    <div>This is Term Deposit Component</div>
+    <div>
+      <h4>This is Term Deposit Component</h4>
+    </div>
   )
 }
 
