@@ -12,7 +12,7 @@ import AccountBalance from './pages/AccountBalance/AccountBalance';
 import AccountInformation from './pages/AccountInformation/AccountInformation';
 import TermDeposit from './pages/TermDeposit/TermDeposit';
 import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
+import Contact, { githubInfoLoader } from './pages/Contact/Contact';
 import NotFound from './pages/NotFound/NotFound';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         <Route path='/account-information' element={<AccountInformation />} />
         <Route path='/term-deposit' element={<TermDeposit />} /> 
         <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />       
+        <Route loader={githubInfoLoader} path='/contact' element={<Contact />} />       
         <Route path='*' element={<NotFound />} />
       </Route>
     )
