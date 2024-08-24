@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Layout from './layouts/Layout';
+import AccountBalance from './pages/AccountBalance/AccountBalance';
+import AccountInformation from './pages/AccountInformation/AccountInformation';
+import TermDeposit from './pages/TermDeposit/TermDeposit';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<Layout />}>
+        <Route index element={<AccountBalance />} />
+        <Route path='/account-information' element={<AccountInformation />} />
+        <Route path='/term-deposit' element={<TermDeposit />} /> 
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />       
+        <Route path='*' element={<NotFound />} />
+      </Route>
+    )
   );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
