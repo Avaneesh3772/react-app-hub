@@ -4,3 +4,13 @@ export  interface UserList {
     title: string,
     body: boolean
   }
+
+  export  interface JobType {
+    id: string,
+    title: string,
+    type: string,
+    description: boolean,
+    location: string,
+    salary: string,
+    company?: {}
+  }

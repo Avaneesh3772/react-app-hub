@@ -14,6 +14,7 @@ import TermDeposit from './pages/TermDeposit/TermDeposit';
 import About from './pages/About/About';
 import Contact, { githubInfoLoader } from './pages/Contact/Contact';
 import NotFound from './pages/NotFound/NotFound';
+import JobLists from './pages/JobLists/JobLists';
 
 function App() {
   const router = createBrowserRouter(
@@ -23,7 +24,8 @@ function App() {
         <Route path='/account-information' element={<AccountInformation />} />
         <Route path='/term-deposit' element={<TermDeposit />} /> 
         <Route path='/about' element={<About />} />
-        <Route loader={githubInfoLoader} path='/contact' element={<Contact />} />       
+        <Route path='/contact' element={<Contact />} loader={githubInfoLoader}/> 
+        <Route path='/job-lists' element={<JobLists />} />      
         <Route path='*' element={<NotFound />} />
       </Route>
     )
