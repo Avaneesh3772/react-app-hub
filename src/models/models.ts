@@ -9,7 +9,7 @@ export  interface UserList {
     id: string,
     title: string,
     type: string,
-    description: boolean,
+    description: string,
     location: string,
     salary: string,
     company?: {}
