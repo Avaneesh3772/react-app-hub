@@ -16,6 +16,7 @@ import Contact, { githubInfoLoader } from './pages/Contact/Contact';
 import NotFound from './pages/NotFound/NotFound';
 import JobLists from './pages/JobLists/JobLists';
 import ApiCallDemo from './pages/ApiCallDemo/ApiCallDemo';
+import MobileToggle from './pages/MobileToggle/MobileToggle';
 
 function App() {
   const router = createBrowserRouter(
@@ -27,7 +28,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} loader={githubInfoLoader}/> 
         <Route path='/job-lists' element={<JobLists />} /> 
-        <Route path='/api-demo' element={<ApiCallDemo />} />     
+        <Route path='/api-demo' element={<ApiCallDemo />} />
+        <Route path='/mobile-toggle' element={<MobileToggle />} />    
         <Route path='*' element={<NotFound />} />
       </Route>
     )
