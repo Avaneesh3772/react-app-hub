@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useQuery } from 'react-query';
 import Spinner from 'react-bootstrap/Spinner';
-import Table from 'react-bootstrap/Table';
 
 // Define a TypeScript interface for the user data
 interface User {
@@ -10,7 +8,6 @@ interface User {
     name: string;
     email: string;
 }
-
 
 const ApiCallDemo = () => { 
 

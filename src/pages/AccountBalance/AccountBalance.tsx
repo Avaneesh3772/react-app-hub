@@ -6,28 +6,6 @@ const AccountBalance = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  /* useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => setData(json))
-      .catch(error => console.error(error));
-  }, []); */
-
-  /* useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-   */
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -44,24 +22,9 @@ const AccountBalance = () => {
     fetchData();
   }, []);
 
-  /* useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-      .then(response => {
-        setData(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []); */
-
   return (
     <div>
-      <h4>This is AccountBalance Component</h4>
-      {/* <ul>
-        {data.map((item:any, index) => (
-          <li key={index}>{item.name}</li>
-        ))}
-      </ul> */}
+      <h4>This is AccountBalance Component</h4>      
       <Table responsive>
          <thead>
           <tr>
