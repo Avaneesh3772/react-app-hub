@@ -14,3 +14,10 @@ export  interface UserList {
     salary: string,
     company?: {}
   }
+
+  export  interface AccountCurrencyInterface {
+    balance: {
+      amount: number;
+      currency: string
+    }
+  }
