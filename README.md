@@ -40,3 +40,5 @@ return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');;
 };
 
 ================================
+
+https://codedamn.com/news/javascript/format-number-as-currency
