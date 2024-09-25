@@ -29,3 +29,14 @@ console.log(formatCurrency(1234.5)); // "$1,234.50" (in the US locale)
 console.log(formatCurrency(1234)); // "$1,234.00"
 
 ================================
+
+https://stackoverflow.com/questions/149055/how-to-format-numbers-as-currency-strings
+
+export const formatCurrency = (amount: number): string => {
+if (typeof amount !== 'number') {
+throw new Error('Invalid argument: amount must be a number');
+}
+return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');;
+};
+
+================================
