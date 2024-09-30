@@ -2,6 +2,8 @@ import React from 'react'
 import balancesHUB from '../../assets/mockdata/amount.json'
 import { formatCurrencyGBP } from '../../utils/formatCurrencyGBP';
 import { formatCurrency } from '../../utils/formatCurrency';
+import { formatDate } from '../../utils/dateFormat';
+
 
 const Accounts = () => {
  console.log("balancesHUB =>", balancesHUB);
@@ -16,7 +18,11 @@ const Accounts = () => {
         Total Amount Veriosn Two:
         <span>{formatCurrency(balancesHUB.balance.amount)} </span>
         <span>{balancesHUB.balance.currency}</span>
-      </div>     
+      </div>   
+      <div>
+        Account Open Date:
+        <span>{formatDate("2024-06-21")} </span>        
+      </div>  
     </>
   )
 }
