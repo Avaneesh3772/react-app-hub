@@ -42,3 +42,28 @@ return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');;
 ================================
 
 https://codedamn.com/news/javascript/format-number-as-currency
+
+================================
+
+Create a typescript arrow function which takes an argument as string such as "2024-06-21" and returns formatted date like Jun 21, 2024
+
+export const formatDate = (dateString: string): string => {
+const date = new Date(dateString);
+
+    // Get the full month name
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+
+    // Format the date using toLocaleDateString with the 'en-US' locale
+    return date.toLocaleDateString('en-US', options);
+
+};
+
+console.log(formatDate("2024-06-21")); // Output: June 21, 2024
+
+================================
+
+Write React unit test spec code for below code written in dateFormat.ts file. Throw type error message when argument dateString does not match string type
+
+================================
+
+Create a typescript arrow function which returns formatted current date and time like 15:36:43 Aug 19, 2024

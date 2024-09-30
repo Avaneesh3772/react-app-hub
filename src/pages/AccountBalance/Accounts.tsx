@@ -3,6 +3,7 @@ import balancesHUB from '../../assets/mockdata/amount.json'
 import { formatCurrencyGBP } from '../../utils/formatCurrencyGBP';
 import { formatCurrency } from '../../utils/formatCurrency';
 import { formatDate } from '../../utils/dateFormat';
+import { currentDateTime } from '../../utils/currentDateTime';
 
 
 const Accounts = () => {
@@ -22,7 +23,11 @@ const Accounts = () => {
       <div>
         Account Open Date:
         <span>{formatDate("2024-06-21")} </span>        
-      </div>  
+      </div> 
+      <div>
+        Current Date and Time:
+        <span>{currentDateTime()} </span>        
+      </div> 
     </>
   )
 }
