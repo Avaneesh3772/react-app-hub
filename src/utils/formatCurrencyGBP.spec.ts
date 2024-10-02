@@ -6,10 +6,10 @@ describe('formatCurrencyGBP', () => {
     expect(formatCurrencyGBP(1000)).toBe('£1,000.00');
   });
 
-  it('should throw an error when the argument is not a number', () => {
-    expect(() => formatCurrencyGBP('1234' as any)).toThrowError('Invalid argument: amount must be a number');
-    expect(() => formatCurrencyGBP(undefined as any)).toThrowError('Invalid argument: amount must be a number');
-    expect(() => formatCurrencyGBP(null as any)).toThrowError('Invalid argument: amount must be a number');
+  it('should return "Invalid input type" for invalid input', () => {
+    expect(formatCurrencyGBP('1234' as any)).toBe('Invalid input type');
+    expect(formatCurrencyGBP(undefined as any)).toBe('Invalid input type');
+    expect(formatCurrencyGBP(null as any)).toBe('Invalid input type');    
   });
 
   it('should handle zero and negative amounts correctly', () => {

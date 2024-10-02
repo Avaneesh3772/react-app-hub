@@ -67,3 +67,14 @@ Write React unit test spec code for below code written in dateFormat.ts file. Th
 ================================
 
 Create a typescript arrow function which returns formatted current date and time like 15:36:43 Aug 19, 2024
+
+================================
+Sharing data from one component to another component
+=> Data.provide and Data.consumer through createContext
+=> useContext Hook
+
+================================
+=> useReducer Hook
+=> useRef Hook
+
+================================
