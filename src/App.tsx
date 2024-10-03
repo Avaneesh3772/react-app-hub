@@ -18,6 +18,7 @@ import JobLists from './pages/JobLists/JobLists';
 import ApiCallDemo from './pages/ApiCallDemo/ApiCallDemo';
 import MobileToggle from './pages/MobileToggle/MobileToggle';
 import Accounts from './pages/AccountBalance/Accounts';
+import AccountsDate from './pages/AccountBalance/AccountsDate';
 
 function App() {
   const router = createBrowserRouter(
@@ -31,7 +32,8 @@ function App() {
         <Route path='/job-lists' element={<JobLists />} /> 
         <Route path='/api-demo' element={<ApiCallDemo />} />
         <Route path='/mobile-toggle' element={<MobileToggle />} /> 
-        <Route path='/currency' element={<Accounts />} />      
+        <Route path='/currency' element={<Accounts />} />   
+        <Route path='/date' element={<AccountsDate />} />   
         <Route path='*' element={<NotFound />} />
       </Route>
     )

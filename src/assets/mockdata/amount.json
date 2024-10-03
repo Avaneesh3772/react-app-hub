@@ -1,6 +1,7 @@
 {
   "balance": {
-    "amount": 175000,
+    "amount": 12345678,
+    "amount2": 175000,
     "currency": "GBP"
   }
 }
