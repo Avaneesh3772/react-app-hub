@@ -2,16 +2,17 @@ import React from "react";
 import balancesHUB from "../../assets/mockdata/amount.json";
 import { showFormattedAmount } from "../../utils/displayFormattedAmount";
 
-const TryCatchAnotherWay = () => {
+const Statements = () => {
   return (
-    <>
+    <div>
+      <h2>Statements</h2>
       <div>
-        Try Catch Page -: Total Amount Version One:
+        Account Balance Page -: Total Amount Version One:
         <span>{showFormattedAmount(balancesHUB.balance.amount)}</span>{" "}
         <span>{balancesHUB.balance.currency}</span>
       </div>
-    </>
+    </div>
   );
 };
 
-export default TryCatchAnotherWay;
+export default Statements;
