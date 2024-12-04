@@ -43,35 +43,41 @@ const Transfer: React.FC = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="account-select" style={{ marginRight: "8px" }}>
-        Select Account:
+    <div style={{ padding: "20px", maxWidth: "400px", fontFamily: "Arial" }}>
+      <h3>New Transfer</h3>
+      <label htmlFor="accountDropdown" style={{ fontWeight: "bold" }}>
+        From:
       </label>
       <select
-        id="account-select"
+        id="accountDropdown"
         value={accounts.indexOf(selectedAccount)}
         onChange={handleChange}
-        style={{ padding: "8px", fontSize: "16px" }}
+        style={{
+          width: "100%",
+          padding: "10px",
+          fontSize: "16px",
+          marginTop: "10px",
+        }}
       >
         {accounts.map((account, index) => (
           <option key={index} value={index}>
-            {`${account.name} | ${
-              account.accountNumber
-            } | Balance: $${account.balance.toLocaleString()}`}
+            {account.name} - {account.accountNumber}
           </option>
         ))}
       </select>
-      <div style={{ marginTop: "16px" }}>
-        <h3>Selected Account Details</h3>
-        <p>
-          <strong>Name:</strong> {selectedAccount.name}
-        </p>
-        <p>
-          <strong>Account Number:</strong> {selectedAccount.accountNumber}
-        </p>
-        <p>
-          <strong>Balance:</strong> ${selectedAccount.balance.toLocaleString()}
-        </p>
+      <div
+        style={{
+          marginTop: "20px",
+          padding: "10px",
+          border: "1px solid #ddd",
+          borderRadius: "5px",
+          backgroundColor: "#f9f9f9",
+        }}
+      >
+        <strong>Selected Account:</strong>
+        <p>{selectedAccount.name}</p>
+        <p>{selectedAccount.accountNumber}</p>
+        <p>Balance: {selectedAccount.balance.toLocaleString("en-GB")} GBP</p>
       </div>
     </div>
   );
