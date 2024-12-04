@@ -24,6 +24,9 @@ const Header = () => {
             <li>
               <NavLink to="/transfer">Transfer</NavLink>
             </li>
+            <li>
+              <NavLink to="/transfer-amount">Transfer Amount</NavLink>
+            </li>
           </ul>
         </div>
         <div>
