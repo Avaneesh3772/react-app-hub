@@ -21,6 +21,7 @@ import Accounts from "./pages/AccountBalance/Accounts";
 import AccountsDate from "./pages/AccountBalance/AccountsDate";
 import Statements from "./pages/Statements/Statements";
 import TryCatchAnotherWay from "./pages/AccountBalance/TryCatchAnotherWay";
+import Transfer from "./pages/Transfer/Transfer";
 
 function App() {
   const router = createBrowserRouter(
@@ -30,6 +31,7 @@ function App() {
         <Route path="/account-information" element={<AccountInformation />} />
         <Route path="/term-deposit" element={<TermDeposit />} />
         <Route path="/about" element={<About />} />
+        <Route path="/transfer" element={<Transfer />} />
         <Route
           path="/contact"
           element={<Contact />}
